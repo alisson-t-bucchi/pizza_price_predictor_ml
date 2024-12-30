@@ -4,14 +4,14 @@ from sklearn.linear_model import LinearRegression
 
 df = pd.read_csv("pizzas.csv")
 model = LinearRegression()
-x = df[["diametro"]]
-y = df[["preco"]]
+x = df[["diameter"]]
+y = df[["price"]]
 model.fit(x, y)
 
 df_1 = pd.read_csv("mozzarella.csv")
 model_1 = LinearRegression()
-x = df_1[["quantia"]]
-y = df_1[["valor"]]
+x = df_1[["quantity"]]
+y = df_1[["value"]]
 model_1.fit(x, y)
 
 def calculate_pizza_price(diameter, model):
