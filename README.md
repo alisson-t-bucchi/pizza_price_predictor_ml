@@ -84,7 +84,7 @@ def calculate_pizza_price(diameter, model):
 def calculate_mozzarella_price(mozzarella, model_1):
 
     if mozzarella:
-        return model_1.predict([[diameter]])[0][0]
+        return model_1.predict([[mozzarella]])[0][0]
     else:
         return 0.0
 
