@@ -41,12 +41,12 @@ def calculate_prosciutto_price(prosciutto, model_2):
     else:
         return 0.0
 
-st.title("Pizza Prize Predictor")
+st.title("🍕 Pizza Prize Predictor")
 st.divider()
 
-diameter = st.number_input("Enter pizza diameter (cm):")
-mozzarella = st.number_input("Enter mozzarella weight (grams):")
-prosciutto = st.number_input("Enter prosciutto weight (grams):")
+diameter = st.number_input("⭕ Enter pizza diameter (cm):")
+mozzarella = st.number_input("🧀 Enter mozzarella weight (grams):")
+prosciutto = st.number_input("🐷 Enter prosciutto weight (grams):")
 
 pizza_price = calculate_pizza_price(diameter, model)
 mozzarella_price = calculate_mozzarella_price(mozzarella, model_1)
@@ -62,5 +62,5 @@ if prosciutto_price > 0:
 st.divider()
 
 total_value = (pizza_price + mozzarella_price + prosciutto_price)
-st.write(f"The total price of your order is {total_value:.2f} euros")
+st.write(f" 💶 The total price of your order is {total_value:.2f} euros. 🤑")
 

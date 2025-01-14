@@ -1,10 +1,10 @@
-# Pizza Price Predictor using Machine Learning. 
+# 🍕 Pizza Price Predictor using Machine Learning. 
 
 This is an interactive application developed with **Streamlit**, **Scikit-learn** and **Matplotlib** libraries and .csv files. 
 
 The objective is predict the price of a pizza based on its diameter and calculate the cost of the required mozzarella cheese using linear regression.  
 
-## Features
+## 📝 Features
 
 - **Pizza price prediction**: Based on the diameter (in centimeters).
 - **Mozzarella cost calculation**: Based on the weight of mozzarella (in grams).
@@ -17,7 +17,7 @@ Make sure you have the following installed on your machine:
 - Python 3.8 or higher
 - Libraries listed in `requirements.txt`
 
-## Installation
+## 🚀 Installation
 
 1. Clone the repository or download the files.
    ```bash
@@ -32,7 +32,7 @@ Make sure you have the following installed on your machine:
 
 3. Ensure that the `pizzas.csv` and `mozzarella.csv` files are in the same directory as the code.
 
-## Data Structure
+## 📊 Data Structure
 
 ### pizzas.csv
 The `pizzas.csv` file should contain the following columns:
@@ -44,7 +44,7 @@ The `mozzarella.csv` file should contain the following columns:
 - **quantity**: Weight of mozzarella in grams.
 - **value**: Corresponding price in currency.
 
-## Usage
+## 🛞 Usage
 
 1. Run the Streamlit application.
    ```bash
@@ -83,38 +83,14 @@ def calculate_pizza_price(diameter, model):
     else:
         return 0.0
 
-def calculate_mozzarella_price(mozzarella, model_1):
-
-    if mozzarella:
-        return model_1.predict([[mozzarella]])[0][0]
-    else:
-        return 0.0
-
-st.title("Pizza Price Predictor")
-st.divider()
-
-diameter = st.number_input("Enter pizza diameter (cm):")
-mozzarella = st.number_input("Enter mozzarella weight (grams):")
-
-pizza_price = calculate_pizza_price(diameter, model)
-mozzarella_price = calculate_mozzarella_price(mozzarella, model_1)
-
-if pizza_price > 0:
-    st.write(f"A pizza with {diameter:.2f} cm of diameter is ${pizza_price:.2f}.")
-if mozzarella_price > 0:
-    st.write(f"{mozzarella:.2f} grams of cheese is ${mozzarella_price:.2f}.")
-
-st.divider()
-
-total_value = (pizza_price + mozzarella_price)
-st.write(f"The total price of your order is ${total_value:.2f}")
+#see the full code in this repository! 
 ```
 
-## Notes
+## ⚠️ Notes
 
 - Ensure that the CSV files contain enough data to train the linear regression models.
 - The application uses the `scikit-learn` library to build and utilize the predictive models.
 
-## License
+## 🗒️ License
 
 This project is licensed under the MIT License. See the `LICENSE` file for more information.
