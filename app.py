@@ -53,14 +53,14 @@ mozzarella_price = calculate_mozzarella_price(mozzarella, model_1)
 prosciutto_price = calculate_prosciutto_price(prosciutto, model_2)
 
 if pizza_price > 0:
-    st.write(f"A pizza with {diameter:.2f} cm of diameter is R${pizza_price:.2f}.")
+    st.write(f"A pizza with {diameter:.2f} cm of diameter is {pizza_price:.2f} euros.")
 if mozzarella_price > 0:
-    st.write(f"{mozzarella:.2f} grams of cheese is R${mozzarella_price:.2f}.")
+    st.write(f"{mozzarella:.2f} grams of cheese is {mozzarella_price:.2f} euros.")
 if prosciutto_price > 0:
-    st.write(f"{prosciutto:.2f} grams of prosciutto is R${prosciutto_price:.2f}.")
+    st.write(f"{prosciutto:.2f} grams of prosciutto is {prosciutto_price:.2f} euros.")
 
 st.divider()
 
 total_value = (pizza_price + mozzarella_price + prosciutto_price)
-st.write(f"The total price of your order is R${total_value:.2f}")
+st.write(f"The total price of your order is {total_value:.2f} euros")
 
