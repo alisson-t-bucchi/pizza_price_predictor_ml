@@ -1,7 +1,6 @@
 # 🍕 Pizza Price Predictor using Machine Learning. 
 
 This is an interactive application developed with **Streamlit**, **Scikit-learn** and **Matplotlib** libraries and .csv files. 
-
 The objective is predict the price of a pizza based on its diameter and calculate the cost of the required mozzarella cheese using linear regression.  
 
 ## 📝 Features
